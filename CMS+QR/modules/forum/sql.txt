@@ -1,0 +1,54 @@
+forum => (3)
+	id 			=> int(255) 	=> 1,
+	cat 		=> int(255) 	=> 1,
+	catname		=> varchar(255) => name
+	protected   => int(1)   	=>  (
+									 0 = evryone, 
+									 1 = only registered, 
+									 2 = only moderators, 
+									 3 = only admins	
+									)
+					
+forum_topics => (7)
+	id			=> int(255)		=> topicid,
+	name		=> varchar(255)	=> Nameoftopic,
+	by			=> varchar(255)	=> Name,
+	datetime    => CURRENT_TIMESTAMP,
+	ip			=> varchar(4) 	=> ip adress,
+	text		=> text,
+	protected   => int(1)		=>	(
+										0 = evryone, 
+										1 = only registered, 
+										2 = only moderators, 
+										3 = only admins	
+									)
+
+forum_reactions => (5)
+	id			=> int(255)		=> reactionid,
+	by			=> varchar(255)	=> name,
+	datetime	=> CURRENT_TIMESTAMP,
+	ip			=> varchar(4)	=> ip adress,
+	reaction    => text			=> reaction
+	
+forum_polls => (9)
+	id			=> int(255)		=> forum id,
+	by			=> varchar(255) => name,
+	name		=> varchar(255) => NameOfPoll,
+	datetime	=> CURRENT_TIMESTAMP,
+	postid		=> int(255)		=> ^topicid^,
+	ANS1		=> text			=> Wes:127.0.0.1
+	ANS2		=> text			=> SOL:000.0.0.0
+	ANS3 		=> text			=> QWE:123.4.5.6
+	ANS4		=> text			=> RTY:654.3.2.1
+	ANS5		=> text			=> RTY:654.3.2.1
+	ANS6		=> text			=> RTY:654.3.2.1
+	ANS7		=> text			=> RTY:654.3.2.1
+	ANS8		=> text			=> RTY:654.3.2.1
+	ANS9		=> text			=> RTY:654.3.2.1
+	ANS10		=> text			=> RTY:654.3.2.1
+	protected   => int(1)		=> (
+									0 = evryone, 
+									1 = only registered, 
+									2 = only moderators, 
+									3 = only admins	
+								   )

@@ -1,0 +1,27 @@
+
+Step 1
+Change in "include/config.php"
+
+#Site Adres:bv. www.wocnl.nl
+$conf['site']['url']        = 'http://127.0.0.1/';
+
+#Site Database (auto make)
+$conf['database']['host']   = 'localhost';
+$conf['database']['user']   = 'root';
+$conf['database']['pass']   = '';
+$conf['database']['data']   = 'cms';
+$conf['database']['pref']   = 'wdgss_';
+
+to the right data
+
+
+Step 2
+import sql.sql to mysql database
+
+
+username: Admin
+password: wtc2001
+
+Step 3
+chmodd "all files and dirs" to 776
+if this does not work CHMODD to 777 [we recommend to not use '777'!]

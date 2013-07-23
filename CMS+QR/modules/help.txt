@@ -1,0 +1,58 @@
+Help 4 Modules
+
+
+To Load A Function Into The Template Use This
+
+<?php
+#load this function automatical
+$wdgssautoload[] = array("nameintemplate",function(parameters));
+#how to use: {wdg:nameintemplate}
+
+# where "nameintemplate" must be changed!
+
+#it works only if set to autoload in general config, don`t change the config file
+# But Set It To Autoload In Online Config
+?>
+
+Access the mysql functions:
+<?php
+ CLASS: $conf['database']['db'];
+ Help?: $conf['database']['db'] -> help();
+?>
+
+You Can Use This Predefined Functions
+<?php
+ $ip = getip(true); //same as $_SERVER['REMOTE_ADDR'] <<< more secure
+ #OR
+ $ip = getip(false); // If Set X-forwarded-For Use Those Then Else see above
+ 
+ #get hostname
+ $hostname = getfullhost(true); // see description above
+ 
+ if ( isproxy ( ) )
+  {
+   exit('I Don`t Like Proxy`s That Way');
+  }
+?>
+
+Ok, WDGSS Can Load Those Pages Example For Module "Test1"
+modules/Test1/info.php   (Module Information See Down "#Info")
+modules/Test1/module.php (Only If Turned On In Autoload By Config!)
+modules/Test1/page.php   (for use with http://www.example.com/Test1.pag)
+modules/Test1/admin.php  (for use with admin panel)
+
+#Info
+<?php
+	#The Module Name Is 'Test1'
+	 
+	$module['Test1'] = array (
+		"author"      => "Wesley De Groot", // Author`s name
+		"version"     => "0.2", //Version
+		"website"     => "http://www.wocnl.nl", // My Website
+		"mysql"       => false, //no Mysql install script (ONLY WDGSS STYLE)
+		"revision"    => "3", //3nd revision
+		"email"       => "wes@wocnl.nl", //MyEmail
+		"wdgssver"    => "6.0.0.1" // Minimal WDGSS Version
+		"description" => "The WDGSS Wysiwyg Using NicEdit WYSIWYG";
+	);
+?>

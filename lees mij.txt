@@ -1,0 +1,27 @@
+
+Stap 1
+verander in "include/config.php"
+
+#Site Adres:bv. www.wocnl.nl
+$conf['site']['url']        = 'http://127.0.0.1/';
+
+#Site Database (auto make)
+$conf['database']['host']   = 'localhost';
+$conf['database']['user']   = 'root';
+$conf['database']['pass']   = '';
+$conf['database']['data']   = 'cms';
+$conf['database']['pref']   = 'wdgss_';
+
+naar de juiste waarde
+
+
+Stap2
+Laad Alles In phpmyadmin uit sql.php
+
+
+dan is je admin naam: Admin
+en je wachtwoord is : wtc2001
+
+stap3
+chmodd "alle mappen en bestanden" naar 776
+als dit niet goed werkt probeer dan CHMODD ALLES NAAR 777
